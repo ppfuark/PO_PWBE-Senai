@@ -1,0 +1,21 @@
+Complexidade dos Algoritmos
+
+1. MergeSort
+   - Tempo:   O(n log n) (sempre divide e junta)  
+   - Espaço:  O(n) (usa arrays extras)  
+
+2. InsertionSort  
+   - Tempo: O(n^2) (vai comparando e trocando)  
+   - Espaço: O(1) (tudo no próprio array)  
+
+3. BubbleSort  
+   - Tempo: O(n^2) (troca várias vezes)  
+   - Espaço: O(1) (também no próprio array)  
+
+4. Busca Linear  
+   - Tempo: O(n) (olha um por um)  
+   - Espaço: O(1)  
+
+5. Busca Binária  
+   - Tempo: O(log n) (vai dividindo ao meio)  
+   - Espaço: O(1)  

@@ -1,0 +1,6 @@
+py -m venv env
+env/Scripts/activate
+pip install django
+django-admin startproject api_pwbe
+cd api_pwbe
+py .\manage.py runserver

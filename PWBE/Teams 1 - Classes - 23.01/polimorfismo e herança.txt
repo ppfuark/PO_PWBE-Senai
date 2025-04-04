@@ -1,0 +1,26 @@
+Herança: Classe filha herda atributos e métodos da classe pai, promovendo reutilização de código.
+    class Animal:
+    def make_sound(self):
+        print("")
+
+    class Dog(Animal):  <--- Herança
+        def make_sound(self):
+            print("Woof Woof")
+
+Polimorfismo: Um método assume diferentes comportamentos dependendo do objeto (geralmente por sobrescrita).
+
+    class Animal:
+    def make_sound(self):
+        print("Some generic animal sound")
+
+    class Dog(Animal):
+        def make_sound(self):
+            print("Woof Woof")
+
+    class Cat(Animal):
+        def make_sound(self):
+            print("Meow Meow")
+
+    animals = [Dog(), Cat()] <--- Polimorfismo
+    for animal in animals:
+        animal.make_sound()
