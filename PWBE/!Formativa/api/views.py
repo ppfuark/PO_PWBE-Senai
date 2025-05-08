@@ -1,5 +1,6 @@
 from .models import Subject, Teacher, RoomReservation
 from .serializers import SubjectSerializer, TeacherSerializer, RoomReservationSerializer
+from .permissions import IsManager
 
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
@@ -11,17 +12,17 @@ class SubjectListCreateAPIView(ListCreateAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     
-    # def get_permissions(self):
-    #     if self.request.method == 'GET':
-    #         return [IsAuthenticated()]
-    #     return [IsManager()]
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            return [IsAuthenticated()]
+        return [IsManager()]
         
 class SubjectRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     
-    # def get_permissions(self):
-    #     return [IsManager()
+    def get_permissions(self):
+        return [IsManager()]
 
 # ====================================== Subjects ============================================
 
@@ -32,17 +33,17 @@ class TeacherListCreateAPIView(ListCreateAPIView):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
     
-    # def get_permissions(self):
-    #     if self.request.method == 'GET':
-    #         return [IsAuthenticated]
-    #     return [IsManager()]
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            return [IsAuthenticated()]
+        return [IsManager()]
 
-class TeacherRetriveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+class TeacherRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
     
-    # def get_permissions(self):
-    #     return [IsManager()]
+    def get_permissions(self):
+        return [IsManager()]
 
 # ====================================== Teacher ============================================
 
@@ -53,15 +54,14 @@ class RoomReservationListCreateAPIView(ListCreateAPIView):
     queryset = RoomReservation.objects.all()
     serializer_class = RoomReservationSerializer
     
-    # def get_permissions(self):
-    #     if self.request.method == 'GET':
-    #         return [IsAuthenticated]
-    #     return [IsManager()]
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            return [IsAuthenticated()]
+        return [IsManager()]
     
-class RoomReservationRetriveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    print("nn")
-    # def get_permissions(self):
-    #     return [IsManager()]
+class RoomReservationRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    def get_permissions(self):
+        return [IsManager()]
 
 
 # ====================================== Teacher ============================================
