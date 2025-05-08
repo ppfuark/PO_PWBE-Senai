@@ -48,7 +48,7 @@ class TeacherRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 # ====================================== Teacher ============================================
 
 
-# ====================================== Teacher ============================================
+# ====================================== RoomReservation ============================================
 
 class RoomReservationListCreateAPIView(ListCreateAPIView):
     queryset = RoomReservation.objects.all()
@@ -64,4 +64,4 @@ class RoomReservationRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
         return [IsManager()]
 
 
-# ====================================== Teacher ============================================
+# ====================================== RoomReservation ============================================

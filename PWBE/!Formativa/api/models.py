@@ -7,7 +7,7 @@ class Teacher(models.Model):
     phone = models.CharField(max_length=11)
     born_date = models.DateField()
     hire_date = models.DateField()
-    assigned_subjects = models.ManyToManyField('Subject',blank=True)
+    assigned_subjects = models.ManyToManyField('Subject',blank=True, related_name="assigned_teachers")
 
     def __str__(self):
         return self.name

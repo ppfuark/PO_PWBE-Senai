@@ -129,3 +129,14 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "formativa",
+        "USER": "root",
+        "PASSWORD": "senai",
+        "HOST": "localhost",
+        "PORT": "3306",
+    }
+}
