@@ -17,7 +17,6 @@ class Subject(models.Model):
     course = models.CharField(max_length=255)
     workload = models.TimeField()
     description = models.TextField()
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name="subjects")
 
     def __str__(self):
         return self.name

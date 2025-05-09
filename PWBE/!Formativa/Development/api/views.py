@@ -6,6 +6,7 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.permissions import IsAuthenticated
 
 
+
 # ====================================== Subjects ============================================
 
 class SubjectListCreateAPIView(ListCreateAPIView):
@@ -25,6 +26,7 @@ class SubjectRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
         return [IsManager()]
 
 # ====================================== Subjects ============================================
+
 
 
 # ====================================== Teacher ============================================
@@ -48,6 +50,7 @@ class TeacherRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
 # ====================================== Teacher ============================================
 
 
+
 # ====================================== RoomReservation ============================================
 
 class RoomReservationListCreateAPIView(ListCreateAPIView):
@@ -60,6 +63,9 @@ class RoomReservationListCreateAPIView(ListCreateAPIView):
         return [IsManager()]
     
 class RoomReservationRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = RoomReservation.objects.all()
+    serializer_class = RoomReservationSerializer
+    
     def get_permissions(self):
         return [IsManager()]
 
