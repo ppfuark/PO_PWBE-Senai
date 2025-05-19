@@ -1,0 +1,23 @@
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--vermelho-principal, #D32F2F);
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.conteiner:hover {
+  background-color: #b71c1c;
+}
+
+.texto {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
